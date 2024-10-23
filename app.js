@@ -44,7 +44,7 @@ app.get('/user/:_id', async function (req, res) {
   }
 });
 
-app.listen({ port: 3000 }, (err, address) => {
+app.listen({ port: 80 }, (err, address) => {
     if(err){
         console.log(err);
         process.exit(1);
