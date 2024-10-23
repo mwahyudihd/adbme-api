@@ -2,6 +2,7 @@ import fastify from "fastify";
 import fastifyMongodb from "@fastify/mongodb";
 
 const app = fastify();
+const PORT = process.env.PORT || 3000;
 
 app.get('*', async (req, res) => {
     return {
@@ -44,7 +45,7 @@ app.get('/user/:_id', async function (req, res) {
   }
 });
 
-app.listen({ port: 3000 }, (err, address) => {
+app.listen({ port: PORT }, (err, address) => {
     if(err){
         console.log(err);
         process.exit(1);
